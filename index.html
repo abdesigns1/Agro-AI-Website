@@ -53,14 +53,14 @@
                     <a class="nav-link" href="/about.html">About</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/AI Assistant.html">AI Assistant</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/blog.html">Blog</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/Marketplace.html">Marketplace</a>
               </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/communities.html">Communities</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact.html">Contact</a>
                 </li>
@@ -80,15 +80,119 @@
 
 
     <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="hero-content">
-            <h1>Bridging the Gap Between <br> Farmers and Consumers</h1>
-            <p>At ABGRO we Provides consumers with fresh, locally-produced food<br> with full transparency and traceability.</p>
+<section class="hero-section d-flex align-items-center">
+        <!-- Floating Agricultural Icons -->
+        <div class="floating-icons">
+            <i class="fas fa-seedling floating-icon fa-2x"></i>
+            <i class="fas fa-tractor floating-icon fa-2x"></i>
+            <i class="fas fa-leaf floating-icon fa-2x"></i>
+            <i class="fas fa-sun floating-icon fa-2x"></i>
+            <i class="fas fa-brain floating-icon fa-2x"></i>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-7">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            Grow Smarter. <br>
+                            Harvest Better.
+                        </h1>
+                        
+                        <p class="hero-subtitle">
+                            Our AI-powered platform helps you make informed decisions—whether it's planting, harvesting, or pricing. Get personalized crop insights, market trends, and connect directly with consumers who value fresh and local.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="/Login.html" class="btn btn-primary-custom">
+                              <i class="fas fa-rocket me-2"></i>
+                              Get Started as a Farmer
+                            </a>
+                               <a href="/AI Assistant.html" class="btn btn-primary-custom" >
+                              <i class="fas fa-chart-line me-2"></i>
+                              Discover AI Insights
+                            </a>
+                            <!-- <a href="/AI Assistant.html" class="btn btn-secondary-custom" style="border: 2px solid #fff;">
+                              <i class="fas fa-chart-line me-2"></i>
+                              Discover AI Insights
+                            </a> -->
+                        </div>
+                        
+                        <!-- Statistics Section -->
+                        <!-- <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">10K+</span>
+                                <span class="stat-label">Active Farmers</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Accuracy Rate</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">25%</span>
+                                <span class="stat-label">Yield Increase</span>
+                            </div> -->
 
-            <a href="/Signup.html" class="btn btn-success">Get Started</a>
-            <a href="/about.html" class="btn btn-success">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-comments" id="chatbot-icon"></i>
+        </button>
+        
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <i class="fas fa-robot me-2"></i>
+                AgriAI Assistant
+            </div>
+            
+            <div class="quick-questions">
+                <div class="quick-question" onclick="sendQuickQuestion('What crops should I plant this season?')">
+                    Best crops for this season?
+                </div>
+                <div class="quick-question" onclick="sendQuickQuestion('How do I improve soil quality?')">
+                    Improve soil quality?
+                </div>
+                <div class="quick-question" onclick="sendQuickQuestion('When should I harvest my crops?')">
+                    Harvest timing?
+                </div>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        Hello! I'm your AgriAI Assistant. I can help you with farming advice, crop recommendations, soil management, pest control, and market insights. What would you like to know?
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-input-area">
+                <div class="chatbot-input-group">
+                    <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Ask me anything about farming..." onkeypress="handleKeyPress(event)">
+                    <button class="chatbot-send" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
+
+
 
 
 <!-- about section -->
@@ -99,12 +203,12 @@
                 <div class="col-md-6">
                     <div class="custom-image-stack">
                         <!-- <img src="https://via.placeholder.com/350x250" alt="Agriculture 1"> -->
-                        <img src="/assets/div.image-wrap.png" alt="Agriculture 2">
+                        <img src="https://www.osiztechnologies.com/_next/static/media/agriculturebanner.7644d44b.webp" alt="Agriculture 2">
                     </div>
                 </div>
                 <!-- Text Section -->
                 <div class="col-md-6 text-section">
-                    <h4>Get to Know Us</h4>
+                    
                     <h2>The Best Agriculture Market</h2>
                     <p class="text-success">Our Unique Value Proposition: A Sustainable and Transparent Marketplace</p>
                     <p>We provide a transparent and accessible platform that connects consumers directly with local farms. 
@@ -116,7 +220,63 @@
                         <li>Transparency and Traceability</li>
                         <li>Sustainable Sourcing</li>
                     </ul>
-                    <a href="/about.html" class="btn btn-success btn-md text-white">Discover More</a>
+                       <a href="/Login.html" class="btn btn-primary-custom">
+                              <i class="fas fa-rocket me-2"></i>
+                              Get Started as a Farmer
+                            </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+  <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-4 fw-bold mb-4">What We Offer</h2>
+                    <p class="lead text-muted">Comprehensive AI-powered solutions designed to address every aspect of modern farming.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Crop Advisory</h5>
+                        <p class="text-muted">AI-driven planting recommendations based on soil conditions, climate data, and market trends.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Market Intelligence</h5>
+                        <p class="text-muted">Real-time pricing data and market forecasts to optimize your selling strategies.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Weather Insights</h5>
+                        <p class="text-muted">Hyperlocal weather forecasting and climate analysis for better farming decisions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Farmer Network</h5>
+                        <p class="text-muted">Connect with local farmers, share knowledge, and build stronger agricultural communities.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -193,56 +353,7 @@
   </div>
 </section>
 
- 
- <!-- How It Works Section -->
- <section class="how-it-works py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">How Our Platform Connects Farmers with Consumers</h2>
-    <div class="row text-center">
-      
-      <!-- Step 1 -->
-      <div class="col-md-3 mb-4">
-        <div class="card border-success">
-          <div class="card-body">
-            <h5 class="card-title">1. Farmers Register</h5>
-            <p class="card-text">Farmers sign up on our platform, providing details about their produce and farm practices.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Step 2 -->
-      <div class="col-md-3 mb-4">
-        <div class="card border-success">
-          <div class="card-body">
-            <h5 class="card-title">2. Products Listed</h5>
-            <p class="card-text">Farmers list their products with descriptions, prices, and availability, making it easy for consumers to browse.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Step 3 -->
-      <div class="col-md-3 mb-4">
-        <div class="card border-success">
-          <div class="card-body">
-            <h5 class="card-title">3. Consumers Shop</h5>
-            <p class="card-text">Consumers browse through the listed products, place orders, and get fresh produce delivered directly from the farms.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Optional Step 4 -->
-      <div class="col-md-3 mb-4">
-        <div class="card border-success">
-          <div class="card-body">
-            <h5 class="card-title">4. Feedback & Reviews</h5>
-            <p class="card-text">Consumers provide feedback and reviews, helping farmers improve and future consumers make informed choices.</p>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
+
 
 
 
@@ -414,7 +525,7 @@
 
 
 
-
+<script src="/js/scripts.js"></script>
     <!-- Bootstrap 4 JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
